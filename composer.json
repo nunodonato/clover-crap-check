@@ -1,5 +1,5 @@
 {
-    "name": "leovie/clover-crap-check",
+    "name": "nunodonato/clover-crap-check",
     "license": [
         "MIT"
     ],
@@ -10,25 +10,27 @@
         {
             "name": "Leo Viezens",
             "email": "leo.viezens@web.de"
+        },
+        {
+            "name": "Nuno Donato",
+            "email": "nunodonato@fastmail.com"
         }
     ],
     "require": {
         "php": ">=8.1",
-        "symfony/console": "^6.2",
-        "symfony/css-selector": "^6.2",
-        "symfony/dom-crawler": "^6.2",
-        "symfony/filesystem": "^6.2",
+        "symfony/console": "^7.0",
+        "symfony/css-selector": "^7.0",
+        "symfony/dom-crawler": "^7.0",
+        "symfony/filesystem": "^7.0",
         "thecodingmachine/safe": "^2.4"
     },
     "require-dev": {
         "ergebnis/composer-normalize": "^2.30",
-        "infection/infection": "^0.26.19",
+        "infection/infection": "^0.28.1",
         "phpstan/phpstan": "^1.10",
         "phpunit/phpunit": "^10.0",
-        "psalm/plugin-phpunit": "^0.18.4",
         "rregeer/phpunit-coverage-check": "^0.3.1",
-        "symfony/var-dumper": "^6.2",
-        "vimeo/psalm": "^5.7"
+        "symfony/var-dumper": "^6.2"
     },
     "autoload": {
         "psr-4": {
@@ -55,7 +57,6 @@
         "coverage-check": "coverage-check build/coverage/clover.xml 100",
         "infection": "infection --threads=max --only-covered",
         "phpstan": "phpstan",
-        "psalm": "psalm --no-progress --no-cache",
         "test": [
             "composer normalize --dry-run",
             "@phpstan",
